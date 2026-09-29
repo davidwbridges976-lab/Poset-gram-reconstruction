@@ -2,27 +2,27 @@
 
 Let (P=(V,\le)) be a finite poset and choose a linear extension. Its zeta matrix is
 
-[
+$
 Z_{xy}=\mathbf 1[x\le y].
-]
+$
 
 Set
 
-[
+$
 K=ZZ^T,qquad d_x=K_{xx}=|U_x|,qquad D=\operatorname{diag}(d_x),
-]
+$
 
 where (U_x) is the principal upper set of (x). The normalized principal-upset Gram matrix is
 
-[
+$
 G=D^{-1/2}KD^{-1/2}.
-]
+$
 
 Equivalently,
 
-[
+$
 G_{xy}=\frac{|U_x\cap U_y|}{\sqrt{|U_x||U_y|}}.
-]
+$
 
 The central problem of this repository is:
 
@@ -34,21 +34,21 @@ There are closely related Gram products for which reconstruction is proved for a
 
 Writing (M=Z^{-1}), the Möbius Gram matrix is (G_\mu=M^TM). For every subset (J\subseteq V),
 
-[
+$
 \det G_\mu[J,J]=1
 \quad\Longleftrightarrow\quad
 J\text{ is an order ideal of }P.
-]
+$
 
 Thus (M^TM), up to simultaneous permutation of rows and columns, recovers the complete ideal family and therefore determines the poset up to isomorphism.
 
 Dually, for (G_\zeta=ZZ^T),
 
-[
+$
 \det G_\zeta[J,J]=1
 \quad\Longleftrightarrow\quad
 J\text{ is an order filter of }P.
-]
+$
 
 Hence (ZZ^T) also determines the finite poset up to isomorphism.
 
@@ -58,9 +58,9 @@ These are structural reconstruction statements. They should not be confused with
 
 Passing from (K=ZZ^T) to
 
-[
+$
 G=D^{-1/2}KD^{-1/2}
-]
+$
 
 removes the absolute principal-upset scales (d_x) from direct observation. The research problem is therefore not whether the unnormalized incidence Gram matrix retains the order—it does—but whether the lost diagonal scale information is intrinsically recoverable from the normalized matrix strongly enough to force a unique poset up to isomorphism.
 
