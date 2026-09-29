@@ -1,0 +1,158 @@
+{
+  "attack": "Whole-Engine Optimized Benchmark \u2014 frozen v56 A16 front-end replacement",
+  "starting_checkpoint": "v56 frozen",
+  "v56_sha256": "1b6f8e51bb16b2932537e1a2082b9f436483db1bfd93c621f27ccef71fcb1bec",
+  "reference": "exact preserved v31 engine_run semantics",
+  "population": {
+    "regular_4x4": 6,
+    "degree2_regular_5x5": 2,
+    "random_8_3": 37,
+    "total": 45
+  },
+  "seed": 20260935,
+  "repetitions": 7,
+  "timing_order": "alternated baseline/optimized by repetition",
+  "families": {
+    "regular_4x4": {
+      "structures": 6,
+      "baseline_correct": 6,
+      "optimized_correct": 6,
+      "decision_agreement": 6,
+      "AO9_pairs": 120,
+      "AO9_consistent": 120,
+      "AO8_activations": 0,
+      "AO10_activations": 0,
+      "baseline_seconds_all": [
+        0.0047078360003069974,
+        0.0042214880013489164,
+        0.004393073000755976,
+        0.004098739000255591,
+        0.005486740001288126,
+        0.00444450000031793,
+        0.004145891000007396
+      ],
+      "optimized_seconds_all": [
+        0.004525913000179571,
+        0.00410985999951663,
+        0.004814726999029517,
+        0.003918317999705323,
+        0.004722760000731796,
+        0.004431420999026159,
+        0.004321866999816848
+      ],
+      "baseline_median": 0.004393073000755976,
+      "optimized_median": 0.004431420999026159,
+      "baseline_over_optimized_ratio": 0.9913463427919373
+    },
+    "degree2_regular_5x5": {
+      "structures": 2,
+      "baseline_correct": 2,
+      "optimized_correct": 2,
+      "decision_agreement": 2,
+      "AO9_pairs": 0,
+      "AO9_consistent": 0,
+      "AO8_activations": 0,
+      "AO10_activations": 0,
+      "baseline_seconds_all": [
+        0.0032784039995021885,
+        0.002932846999101457,
+        0.003091393000431708,
+        0.0030334460006997688,
+        0.0031117349990381626,
+        0.003080447999309399,
+        0.0033695820002321852
+      ],
+      "optimized_seconds_all": [
+        0.0014539590010826942,
+        0.000878131999343168,
+        0.0009127840003202436,
+        0.0012534369998320471,
+        0.0012090500003978377,
+        0.0013279089998832205,
+        0.000954676999754156
+      ],
+      "baseline_median": 0.003091393000431708,
+      "optimized_median": 0.0012090500003978377,
+      "baseline_over_optimized_ratio": 2.556877713423337
+    },
+    "random_8_3": {
+      "structures": 37,
+      "baseline_correct": 37,
+      "optimized_correct": 37,
+      "decision_agreement": 37,
+      "AO9_pairs": 0,
+      "AO9_consistent": 0,
+      "AO8_activations": 0,
+      "AO10_activations": 0,
+      "baseline_seconds_all": [
+        3.0404755050003587,
+        3.0310318390002067,
+        2.9852626519987098,
+        2.908400360000087,
+        3.030554272001609,
+        2.996306397999433,
+        3.10306601999946
+      ],
+      "optimized_seconds_all": [
+        0.038520488000358455,
+        0.03838398199877702,
+        0.0338890809998702,
+        0.03201792399886472,
+        0.03587600600076257,
+        0.03384942499906174,
+        0.056836392999684904
+      ],
+      "baseline_median": 3.030554272001609,
+      "optimized_median": 0.03587600600076257,
+      "baseline_over_optimized_ratio": 84.4730116261323
+    }
+  },
+  "aggregate": {
+    "structures": 45,
+    "baseline_correct": 45,
+    "optimized_correct": 45,
+    "decision_agreement": 45,
+    "AO9_pairs": 120,
+    "AO9_consistent": 120,
+    "AO8_activations": 0,
+    "AO10_activations": 0,
+    "baseline_seconds_all": [
+      3.048461745000168,
+      3.038186174000657,
+      2.9927471179998975,
+      2.9155325450010423,
+      3.0391527470019355,
+      3.0038313459990604,
+      3.1105814929996995
+    ],
+    "optimized_seconds_all": [
+      0.04450036000162072,
+      0.043371973997636815,
+      0.03961659199921996,
+      0.03718967899840209,
+      0.041807816001892206,
+      0.03960875499797112,
+      0.06211293699925591
+    ],
+    "baseline_median": 3.038186174000657,
+    "optimized_median": 0.041807816001892206,
+    "baseline_over_optimized_ratio": 72.67029145610357
+  },
+  "status": "PASS_CORRECTNESS_AND_WHOLE_ENGINE_SPEEDUP_ON_MATCHED_WORKLOAD",
+  "interpretation": [
+    "Correctness and decision agreement were checked before performance interpretation.",
+    "The optimized path changes A16 acquisition only: exact maximum-clique acquisition replaces exhaustive subset acquisition; A22->A19->A15 semantics remain.",
+    "AO9 runs only on legitimate exact ambiguity; AO8/AO10 are inactive on this matched interface and their mathematics is not executed.",
+    "The aggregate ratio is now an end-to-end whole-engine timing ratio on the matched 45-structure workload, unlike the module-local v56 A16 ratio.",
+    "Finite benchmark timing does not establish asymptotic complexity or global optimality."
+  ],
+  "next": "Test A18/component routing as a distinct optimization only where it can actually skip work; then measure its marginal whole-engine contribution without disturbing the frozen v56 A16 replacement.",
+  "firewall": [
+    "v56 frozen artifact unchanged.",
+    "Same exact preserved 45 structures used by both paths.",
+    "Seven repetitions; execution order alternated.",
+    "No A18 savings credited.",
+    "No synthetic AO8/AO10 activations.",
+    "No external competitor benchmark before final internal engine freeze."
+  ]
+}
