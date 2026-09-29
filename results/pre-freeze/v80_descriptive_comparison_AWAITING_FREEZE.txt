@@ -1,0 +1,63 @@
+{
+  "checkpoint": "v80",
+  "title": "Track A \u2194 Track C Descriptive Matched-Population Comparison",
+  "status": "COMPARISON_COMPLETE__DESCRIPTIVE_ONLY__AWAITING_FREEZE",
+  "predecessor": {
+    "file": "CS_Quarantine_Branch_TrackC-2WL-Benchmark_v79_FROZEN.zip",
+    "testzip": null,
+    "sha256": "24f9ccb4f18197e5269c32f84aa67accef7f763d25a6541fe7eac22c916d2494"
+  },
+  "population": {
+    "same_frozen_population": true,
+    "seed": 20260935,
+    "total": 45,
+    "families": {
+      "regular4x4": 6,
+      "degree2_regular5x5": 2,
+      "random8_3": 37
+    }
+  },
+  "track_A": {
+    "checkpoint": "v74",
+    "status": "FROZEN_PASS__TRACK_A_315_OF_315_CORRECT",
+    "population": 45,
+    "repetitions": 7,
+    "correct": 315,
+    "total": 315,
+    "median_45_instance_total_seconds": 0.051716411999223055,
+    "raw_sha256": "429430fb692d2b2e36afd10da03330e93566906ae650b9362f12207f29dfcd91",
+    "source_sha256": "ef5a91e87597da0cfaa2869d10f8aae0978d3880123db5ae40d6d7a085de4040",
+    "task": "G input to independently validated poset reconstruction",
+    "measurement_unit": "complete 45-instance workload"
+  },
+  "track_C": {
+    "checkpoint": "v79",
+    "status": "FROZEN_COMPLETE__TRACK_C_7_OF_7_REPETITIONS",
+    "repetitions": 7,
+    "median_45_structure_total_seconds": 0.562906189999012,
+    "raw_sha256": "69efba3f02b3dbb72f068a5d2a51838ec087e59a5876f9ebcdf3ab8e8eee316b",
+    "optimized_source_sha256": "e027b937b9b403f7f7427f22da038b8a7d3ace7f1cd2218e1e0c2b50ec4a581c",
+    "task": "directed batch 2-WL refinement signatures with shared palettes on same-n batches",
+    "measurement_unit": "complete 45-structure workload"
+  },
+  "descriptive_observation": {
+    "median_quotient_2wl_over_engine": 10.884478799640405,
+    "statement": "On these separately executed frozen measurements, the Track C median is 10.884479 times the Track A median.",
+    "classification": "descriptive timing quotient only"
+  },
+  "what_is_supported": [
+    "Both tracks used the same frozen 45-structure population and seven measured repetitions.",
+    "Track A completed 315/315 validated reconstructions.",
+    "Track C completed 7/7 full-workload repetitions using the frozen semantics-verified optimized 2-WL implementation.",
+    "The two frozen medians may be reported side by side and their numerical quotient may be reported descriptively."
+  ],
+  "what_is_not_supported": [
+    "No same-task speedup claim.",
+    "No claim that Track A and 2-WL compute equivalent outputs.",
+    "No general complexity or asymptotic superiority claim.",
+    "No general expressive dominance claim.",
+    "This does not replace the frozen v72 controlled head-to-head protocol."
+  ],
+  "track_B_note": "v75 cvc5 remains frozen incomplete/historical and is not used in this quotient.",
+  "next": "Freeze this descriptive comparison if accepted; any stronger comparison requires a separately justified common task/output criterion."
+}
