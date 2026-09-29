@@ -1,0 +1,56 @@
+{
+  "track": "C",
+  "method": "optimized semantics-verified directed batch 2-WL",
+  "population": {
+    "total": 45,
+    "seed": 20260935,
+    "same_n_batches": [
+      {
+        "n": 8,
+        "instances": 6
+      },
+      {
+        "n": 10,
+        "instances": 2
+      },
+      {
+        "n": 16,
+        "instances": 37
+      }
+    ]
+  },
+  "measured_repetitions": 7,
+  "measured_batch_records": 21,
+  "warmup": [
+    {
+      "family": "regular4x4",
+      "seconds": 0.00036349699985294137,
+      "rounds": 1,
+      "states_per_structure": 64
+    },
+    {
+      "family": "degree2_regular5x5",
+      "seconds": 0.0016513549999217503,
+      "rounds": 3,
+      "states_per_structure": 100
+    },
+    {
+      "family": "random8_3",
+      "seconds": 0.011046363999412279,
+      "rounds": 4,
+      "states_per_structure": 256
+    }
+  ],
+  "rep_totals": [
+    {"rep": 1, "total_seconds": 0.5897491469995657},
+    {"rep": 2, "total_seconds": 0.5430021829997713},
+    {"rep": 3, "total_seconds": 0.4381839169991508},
+    {"rep": 4, "total_seconds": 0.562906189999012},
+    {"rep": 5, "total_seconds": 0.49062537499958125},
+    {"rep": 6, "total_seconds": 0.598204085999896},
+    {"rep": 7, "total_seconds": 0.6024088489994028}
+  ],
+  "median_45_structure_total_seconds": 0.562906189999012,
+  "raw_sha256": "69efba3f02b3dbb72f068a5d2a51838ec087e59a5876f9ebcdf3ab8e8eee316b",
+  "optimized_source_sha256": "e027b937b9b403f7f7427f22da038b8a7d3ace7f1cd2218e1e0c2b50ec4a581c"
+}
