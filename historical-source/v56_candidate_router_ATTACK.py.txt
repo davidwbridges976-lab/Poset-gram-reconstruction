@@ -1,0 +1,47 @@
+"""Candidate optimized router v56 ATTACK — not frozen.
+Engineering change: exact A16 acquisition by maximum cliques of the orthogonality graph.
+Mathematical semantics A16/A22/A19/A15 are preserved. Optional AO8/AO9/AO10 are conditional.
+"""
+import itertools, numpy as np, networkx as nx
+
+def gram(Z):
+    K=Z.astype(int)@Z.astype(int).T
+    d=np.diag(K)
+    return K/np.sqrt(np.outer(d,d))
+
+def maxorth_clique(G,tol=1e-12):
+    n=len(G); H=nx.Graph(); H.add_nodes_from(range(n))
+    for i in range(n):
+        for j in range(i+1,n):
+            if abs(G[i,j])<=tol: H.add_edge(i,j)
+    cl=list(nx.find_cliques(H)); m=max(map(len,cl)) if cl else 0
+    return [sorted(C) for C in cl if len(C)==m]
+
+def ao8_one_point_recovery(ZR,c):
+    ZR=np.asarray(ZR,dtype=int); c=np.asarray(c,dtype=int)
+    a=np.rint(np.linalg.solve(ZR.astype(float),c.astype(float))).astype(int)
+    if np.any((a!=0)&(a!=1)) or not np.array_equal(ZR@a,c):
+        return {"status":"REJECTED","module":"AO8","attachment":None}
+    return {"status":"RECOVERED","module":"AO8","attachment":a.tolist()}
+
+def ao9_transport(K,d,dprime):
+    K=np.asarray(K,float); d=np.asarray(d,float); dp=np.asarray(dprime,float)
+    if np.any(d<=0) or np.any(dp<=0):
+        return {"status":"REJECTED","module":"AO9","Kprime":None}
+    s=np.sqrt(dp/d); Kp=(s[:,None]*K)*s[None,:]
+    return {"status":"TRANSPORTED","module":"AO9","Kprime":Kp.tolist()}
+
+def ao10_size2_boundary_hall(boundary_size,certified_paired_boundary):
+    if not certified_paired_boundary: return {"status":"NOT_APPLICABLE","module":"AO10"}
+    if boundary_size==2: return {"status":"HALL_SAFE_SIZE2","module":"AO10"}
+    return {"status":"NOT_APPLICABLE","module":"AO10"}
+
+def route_certified_state(state):
+    kind=state.get("certified_state")
+    if kind=="one_point_residual":
+        return ao8_one_point_recovery(state["ZR"],state["c"])
+    if kind=="same_G_competing_exact":
+        return ao9_transport(state["K"],state["d"],state["dprime"])
+    if kind=="paired_boundary":
+        return ao10_size2_boundary_hall(state["boundary_size"],bool(state.get("certified_paired_boundary",False)))
+    return {"status":"ORDINARY_PATH","module":"BASE"}
