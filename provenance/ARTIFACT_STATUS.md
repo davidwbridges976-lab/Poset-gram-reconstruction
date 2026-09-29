@@ -51,7 +51,21 @@ The preserved archives establish the following original SHA-256 identities:
 - v78 optimized Track C source: `e027b937b9b403f7f7427f22da038b8a7d3ace7f1cd2218e1e0c2b50ec4a581c`
 - v79 raw Track C output: `69efba3f02b3dbb72f068a5d2a51838ec087e59a5876f9ebcdf3ab8e8eee316b`
 
-These hashes identify the original artifacts. They must not be interpreted as a claim that every corresponding GitHub file has already been independently fetched back and shown byte-identical.
+These hashes identify the original artifacts.
+
+### Repository byte-verification pass — 2026-09-29
+
+For files whose authoritative original bytes were available, repository Git blob identities were compared against Git blob identities independently computed from those original bytes. Because a Git blob ID hashes the exact byte length and byte content (with Git's blob header), equality establishes byte identity without relying on rendered text.
+
+Verified byte-identical repository copies:
+
+- `src/reconstruction/CS_TrackA_Independent_Benchmark_v74.py` — repository blob `a4f95e4a3020550e86af1cae8f7478056381cee4`; exact match to the authoritative v74 source (SHA-256 `ef5a91e87597da0cfaa2869d10f8aae0978d3880123db5ae40d6d7a085de4040`).
+- `src/comparators/wl2/CS_TrackC_2WL_Optimized_v78.py` — repository blob `b4dab718b70264f1547ab4729360b7614a57d581`; exact match to the authoritative v78 source (SHA-256 `e027b937b9b403f7f7427f22da038b8a7d3ace7f1cd2218e1e0c2b50ec4a581c`).
+- `src/comparators/wl2/reference/cs_ao4_wl_power_result.py` — repository blob `cf00018457481897672c74319d4e96712f957800`; exact match to the preserved historical reference source (SHA-256 `c02dfc41a5217ee106d314f79d7cc12e2433df10bc6677850e9f3980eee78135`). This byte verification does **not** change its ownership/licensing exclusion.
+- `results/frozen/trackC_raw_v79.jsonl` — repository blob `b766f9d734e68cf85beed7c91d9b735af005d641`; exact match to the authoritative v79 raw output (SHA-256 `69efba3f02b3dbb72f068a5d2a51838ec087e59a5876f9ebcdf3ab8e8eee316b`).
+- `results/frozen/trackC_warmup_v79.json` — repository blob `2aaefe9340fb54150f41573317e0ee68d1ef3ed7`; exact match to the preserved v79 warm-up bytes available in the verified archive chain (SHA-256 `10d5e81e63dd110e5e58e354ed1810e652f42b6af26839675943e1450897edf0`).
+
+Readable packaging representations that are **not** byte-identical to the authoritative originals remain labeled as representations. In particular, the repository v74 summary/warm-up representations do not have the authoritative originals' Git blob identities, and the repository v79 summary representation likewise differs from the preserved original. No research values are promoted on the basis of those representations.
 
 ## Outstanding exact-artifact work
 
