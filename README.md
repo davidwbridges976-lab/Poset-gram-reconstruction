@@ -73,6 +73,17 @@ This repository deliberately separates:
 
 No finite benchmark is promoted into an arbitrary-(n) theorem, and later mathematical developments are not back-imported into earlier computational checkpoints.
 
+## License
+
+This repository uses a split-license structure:
+
+- project-owned software: **GPL-3.0-only**;
+- project-owned documentation and research exposition: **CC BY-SA 4.0**;
+- project-owned experimental/result records: **CC BY 4.0**;
+- the historical reference source `src/comparators/wl2/reference/cs_ao4_wl_power_result.py` is **explicitly excluded** from these license grants because its right-to-license status is unresolved.
+
+See `LICENSE.md` for the controlling scope notice and `COPYING` for the GPLv3 text. Licensing does not alter any artifact's frozen, historical, pre-freeze, or evidentiary status.
+
 ## Packaging status
 
 The principal unresolved exact-artifact transfer is the original v74 `trackA_raw.jsonl` (315 records; 45,264 bytes; SHA-256 `429430fb692d2b2e36afd10da03330e93566906ae650b9362f12207f29dfcd91`). It is intentionally not reconstructed from aggregate statistics.
