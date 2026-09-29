@@ -1,0 +1,14 @@
+{
+  "checkpoint": "v74",
+  "title": "Track A — Fresh Independent Optimized-Engine Benchmark",
+  "status": "FROZEN_PASS__TRACK_A_315_OF_315_CORRECT",
+  "predecessor": {"file":"CS_Quarantine_Branch_Independent-Matched-Workload-Protocol_v73_FROZEN.zip","testzip":null,"sha256":"91d728750cd79b6b953ab1146e39464532b32007ca8f3c6f80beefce6a88934f"},
+  "executed_source":{"file":"CS_TrackA_Independent_Benchmark_v74.py","sha256":"ef5a91e87597da0cfaa2869d10f8aae0978d3880123db5ae40d6d7a085de4040"},
+  "raw_results":{"file":"trackA_raw.jsonl","sha256":"429430fb692d2b2e36afd10da03330e93566906ae650b9362f12207f29dfcd91","records":315},
+  "summary":{"file":"trackA_summary.json","sha256":"895557c213894f4e5f0e71de26fc65cd688049da04e06d46f74f49db5cd73597"},
+  "warmup":{"file":"warmup.json","sha256":"5d6c8aa6af652454158092c1cf7d9325e67efbf70dcad6a1237a80c4ade132a5","measured_dataset":false},
+  "result":{"population":45,"repetitions":7,"correct":315,"total":315,"median_45_instance_total_seconds":0.051716411999223055,"family_summary":{"regular4x4":{"records":42,"median_per_instance_seconds":0.0005681379998350167,"min_seconds":0.00044880499990540557,"max_seconds":0.0035812289997920743},"degree2_regular5x5":{"records":14,"median_per_instance_seconds":0.0006312555005933973,"min_seconds":0.0005785470002592774,"max_seconds":0.0007724189999862574},"random8_3":{"records":259,"median_per_instance_seconds":0.0011909979994015885,"min_seconds":0.001046478999342071,"max_seconds":0.001966352000636107}}},
+  "interpretation":{"warmup_required_for_v74_protocol":true,"warmup_included_in_measured_times":false,"warmup_required_by_engine_algorithm_itself":false,"note":"The warm-up is an experimental timing-control step in v73/v74, not a mathematical or algorithmic prerequisite for the optimized engine."},
+  "track_B_started":false,
+  "next":"Track B cvc5 independent benchmark only after explicit authorization."
+}
