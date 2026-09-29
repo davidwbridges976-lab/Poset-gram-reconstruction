@@ -89,6 +89,16 @@ A rerun on another machine can test whether the correctness results reproduce. W
 
 Accordingly, a fresh timing run should be reported as a new replication measurement rather than silently replacing the frozen timing record.
 
+## Modern smoke-test status
+
+The repository's GitHub Actions smoke-test workflow has completed successfully after installation from `requirements-dev.txt`. The workflow currently exercises Python 3.11 and 3.12.
+
+This is a present-day executability check only. It is not part of the frozen v74 timing experiment and does not establish historical package-version identity.
+
 ## Remaining packaging work
 
-The repository is still being reconstructed from preserved frozen archives. Some raw outputs and checkpoint documents are identified by verified hashes but have not yet been copied byte-for-byte into the curated tree. Their absence from the tree does not invalidate the frozen record, but it should remain visible rather than being filled with reconstructed substitutes.
+The main unresolved exact transfer is the original v74 `trackA_raw.jsonl` (315 records, 45,264 bytes, SHA-256 `429430fb692d2b2e36afd10da03330e93566906ae650b9362f12207f29dfcd91`).
+
+A Track C v79 raw JSONL repository copy is present, along with readable v74/v79 summary and warm-up representations. Presence in the tree should not be confused with independently established byte identity: the untouched frozen archives remain authoritative until a repository copy is fetched and its SHA-256 is verified against the original.
+
+Missing original bytes are not reconstructed from aggregate statistics and presented as historical artifacts.
