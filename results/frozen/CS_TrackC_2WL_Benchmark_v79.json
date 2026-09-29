@@ -1,0 +1,79 @@
+{
+  "checkpoint": "v79",
+  "title": "Track C \u2014 Fresh Optimized 2-WL Benchmark",
+  "status": "FROZEN_COMPLETE__TRACK_C_7_OF_7_REPETITIONS",
+  "predecessor": {
+    "file": "CS_Quarantine_Branch_TrackC-2WL-Optimization-Equivalence_v78_FROZEN.zip",
+    "testzip": null,
+    "sha256": "ba0d8d0ececa299ba9b051c5ef376c292b43b9c57b0c74e5c0fa0ca0488fa737"
+  },
+  "optimized_2wl": {
+    "file": "CS_TrackC_2WL_Optimized_v78.py",
+    "sha256": "e027b937b9b403f7f7427f22da038b8a7d3ace7f1cd2218e1e0c2b50ec4a581c"
+  },
+  "population": {
+    "total": 45,
+    "seed": 20260935,
+    "same_n_batches": [
+      {
+        "n": 8,
+        "instances": 6
+      },
+      {
+        "n": 10,
+        "instances": 2
+      },
+      {
+        "n": 16,
+        "instances": 37
+      }
+    ]
+  },
+  "measurement": {
+    "repetitions": 7,
+    "measured_batch_records": 21,
+    "warmup_excluded": true,
+    "raw_sha256": "69efba3f02b3dbb72f068a5d2a51838ec087e59a5876f9ebcdf3ab8e8eee316b",
+    "summary_sha256": "5adf881884c00c05929904f2e871cadeca03cc4e546159e9c6dc5e1b26458921"
+  },
+  "rep_totals": [
+    {
+      "rep": 1,
+      "total_seconds": 0.5897491469995657
+    },
+    {
+      "rep": 2,
+      "total_seconds": 0.5430021829997713
+    },
+    {
+      "rep": 3,
+      "total_seconds": 0.4381839169991508
+    },
+    {
+      "rep": 4,
+      "total_seconds": 0.562906189999012
+    },
+    {
+      "rep": 5,
+      "total_seconds": 0.49062537499958125
+    },
+    {
+      "rep": 6,
+      "total_seconds": 0.598204085999896
+    },
+    {
+      "rep": 7,
+      "total_seconds": 0.6024088489994028
+    }
+  ],
+  "median_45_structure_total_seconds": 0.562906189999012,
+  "trackA_reference_median_seconds": 0.051716411999223055,
+  "descriptive_median_quotient_2wl_over_trackA": 10.884478799640405,
+  "interpretation_firewall": [
+    "The quotient is descriptive only; it is not a same-task speedup claim.",
+    "2-WL computes refinement signatures while Track A performs G-to-poset reconstruction and validation.",
+    "No general expressive equivalence or dominance is established.",
+    "No post-timing 2-WL optimization was performed."
+  ],
+  "next": "Align frozen Track A and Track C datasets and prepare an explicitly caveated descriptive comparison; keep v75 cvc5 partial branch historical and separate."
+}
