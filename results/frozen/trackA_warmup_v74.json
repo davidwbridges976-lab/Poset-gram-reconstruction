@@ -1,0 +1,5 @@
+[
+  {"family":"regular4x4","family_index":0,"seconds":0.003476565000710252,"validated_correct":true},
+  {"family":"degree2_regular5x5","family_index":0,"seconds":0.000787667000622605,"validated_correct":true},
+  {"family":"random8_3","family_index":0,"seconds":0.0011447819997556508,"validated_correct":true}
+]
