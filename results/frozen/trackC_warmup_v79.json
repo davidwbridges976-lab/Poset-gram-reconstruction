@@ -1,0 +1,20 @@
+[
+  {
+    "family": "regular4x4",
+    "seconds": 0.00036349699985294137,
+    "rounds": 1,
+    "states_per_structure": 64
+  },
+  {
+    "family": "degree2_regular5x5",
+    "seconds": 0.0016513549999217503,
+    "rounds": 3,
+    "states_per_structure": 100
+  },
+  {
+    "family": "random8_3",
+    "seconds": 0.011046363999412279,
+    "rounds": 4,
+    "states_per_structure": 256
+  }
+]
