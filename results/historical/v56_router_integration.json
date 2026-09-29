@@ -1,0 +1,104 @@
+{
+  "attack": "Candidate Optimized Router Integration \u2014 A16 front-end replacement",
+  "starting_checkpoint": "v55 frozen",
+  "v55_sha256": "abc2d4b8b8fffc380c5a0a734faaf55e18e940be1ca548110ab7be66bf7df41a",
+  "preserved_v31_source_sha256": "20175607b31b1de34aa2b1822402a47abe8fbe4956a00175846fb513906741f8",
+  "change": "Replace exhaustive 2^n subset enumeration for A16 maximum orthogonal sets with exact maximum-clique enumeration on the zero-offdiagonal/orthogonality graph. Preserve downstream A22->A19->A15 and conditional AO8/AO9/AO10 semantics.",
+  "correctness": {
+    "matched_structures": 45,
+    "exact_A16_set_equality": 45,
+    "decision_agreement": 45,
+    "old_correct": 45,
+    "new_correct": 45,
+    "AO9_pairs_new": 120,
+    "AO9_consistent_new": 120
+  },
+  "acquisition_timing": {
+    "regular_4x4": {
+      "old_exhaustive_seconds_all": [
+        0.0018324280008528149,
+        0.0016712669948901748,
+        0.002031958001680323,
+        0.0014128290022199508,
+        0.0014108750001469161,
+        0.0013430330036499072,
+        0.001285094997001579
+      ],
+      "new_clique_seconds_all": [
+        0.0003334520024509402,
+        0.00027407299967308063,
+        0.0003232569997635437,
+        0.00023085599968908355,
+        0.00031849999868427403,
+        0.00020918600057484582,
+        0.0002607829992484767
+      ],
+      "old_median": 0.0014128290022199508,
+      "new_median": 0.00027407299967308063,
+      "old_over_new_ratio": 5.154936837649822
+    },
+    "degree2_regular_5x5": {
+      "old_exhaustive_seconds_all": [
+        0.0021220960006758105,
+        0.00202612099928956,
+        0.002164049001294188,
+        0.0022481539999716915,
+        0.002170748999560601,
+        0.0022572180005226983,
+        0.0022115699994174065
+      ],
+      "new_clique_seconds_all": [
+        0.00014755199845239986,
+        0.0001129810007114429,
+        0.0004541949983831728,
+        0.0001166359998023836,
+        0.0001586480011610547,
+        0.00012060200060659554,
+        0.00015381200137198903
+      ],
+      "old_median": 0.002170748999560601,
+      "new_median": 0.00014755199845239986,
+      "old_over_new_ratio": 14.71175600688921
+    },
+    "random_8_3": {
+      "old_exhaustive_seconds_all": [
+        2.9793033899968577,
+        2.8564278690028004,
+        3.052408330999242,
+        3.0211913810016995,
+        3.0351763400085474,
+        2.878838856004222,
+        2.9110222309955134
+      ],
+      "new_clique_seconds_all": [
+        0.005411495001681033,
+        0.005132147005497245,
+        0.010906438990787137,
+        0.006890332992043113,
+        0.005605404010566417,
+        0.0053501000056712655,
+        0.005648314994687098
+      ],
+      "old_median": 2.9793033899968577,
+      "new_median": 0.005605404010566417,
+      "old_over_new_ratio": 531.5055586324819
+    }
+  },
+  "interpretation": [
+    "The A16 mathematics is unchanged: both implementations return exactly the same maximum orthogonal sets on all 45 matched structures.",
+    "The change is an engineering replacement of exhaustive subset acquisition by maximum-clique enumeration of the orthogonality graph.",
+    "This directly targets the v55 front-end bottleneck instead of optimizing already-cheap downstream phases.",
+    "AO8/AO9/AO10 remain conditional and are not executed on inactive states.",
+    "The measured ratios are A16 acquisition ratios only, not yet whole-engine speedups."
+  ],
+  "status": "PASS_A16_FRONTEND_REPLACEMENT_CORRECT_ON_MATCHED_WORKLOAD",
+  "next": "Run the complete candidate optimized engine end-to-end against the frozen pre-import/reference path on matched workloads, preserving correctness first; then measure whole-engine timing. Also retain A18/component-routing as a separate possible later optimization rather than crediting unimplemented savings.",
+  "firewall": [
+    "v55 remains unchanged.",
+    "No mathematical theorem is altered.",
+    "Exact A16 output equality was checked before timing interpretation.",
+    "No module timing is called a whole-engine speedup.",
+    "No A18 decomposition benefit is claimed in this attack.",
+    "No competitor comparison begins before the internal optimized engine is frozen."
+  ]
+}
