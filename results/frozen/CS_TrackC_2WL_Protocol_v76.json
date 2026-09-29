@@ -1,0 +1,34 @@
+{
+  "checkpoint": "v76",
+  "title": "Track C — 2-WL Matched-Workload Comparison Protocol",
+  "status": "PROTOCOL_DEFINED__ZERO_TRACK_C_EXECUTIONS",
+  "purpose": "Compare computational work/timing on a matched frozen workload using a fresh 2-WL implementation and the current optimized engine-related computation, without claiming task or expressive equivalence that has not been proved.",
+  "population": {
+    "seed": 20260935,
+    "regular4x4": 6,
+    "degree2_regular5x5": 2,
+    "random8_3": 37,
+    "total": 45
+  },
+  "measurement": {
+    "repetitions": 7,
+    "warmup": "one untimed warm-up per method per family",
+    "clock": "high-resolution monotonic wall clock",
+    "raw_repetitions_preserved": true,
+    "no_parallelism": true,
+    "no_adaptive_dropping": true
+  },
+  "track_c_2wl": {
+    "requirement": "Use an explicitly preserved executable 2-WL implementation; define its input representation, initialization, refinement-to-stability rule, output statistic, and timing boundary before measurement.",
+    "optimization": "Implementation may be optimized before measurement, but must be frozen before any comparative timing is observed."
+  },
+  "comparison_firewall": [
+    "2-WL is not automatically the same computational task as full G-to-poset reconstruction.",
+    "Historical collision experiments do not establish general expressive equivalence between 2-WL and the reconstruction engine.",
+    "Do not report a winner/speedup as if methods solve the same task unless a separate equivalence result supports that interpretation.",
+    "Allowed comparison: matched-instance computational timing/work for explicitly defined outputs, with task-boundary caveat.",
+    "Do not alter v74 Track A or v75 Track B."
+  ],
+  "executions": 0,
+  "next": "Audit and freeze the exact 2-WL implementation and timing boundary before executing Track C."
+}
