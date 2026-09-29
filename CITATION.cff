@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this research repository, please cite it using the metadata below."
+title: "Poset Gram Reconstruction"
+type: software
+authors:
+  - family-names: "Bridges"
+    given-names: "David"
+repository-code: "https://github.com/davidwbridges976-lab/Poset-gram-reconstruction"
+abstract: >-
+  Reproducibility repository for a finite-poset reconstruction program studying
+  recovery of order structure from normalized Gram-type data, with preserved
+  computational checkpoints, provenance records, and explicit claim boundaries.
