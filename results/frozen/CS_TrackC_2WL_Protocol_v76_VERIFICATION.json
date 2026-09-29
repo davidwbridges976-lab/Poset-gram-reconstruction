@@ -1,0 +1,8 @@
+{
+  "checkpoint":"v76",
+  "title":"Track C — 2-WL Comparison Protocol",
+  "status":"FROZEN_PROTOCOL",
+  "archive_sha256":"9c21c8f4f9416c8a5358c407b85d334d3c19ba882c16863979044a170b2988f6",
+  "protocol_sha256":"3711e0c096a7da70579cbc90acdd475150458e03dada1a8e2be47dcff0e1375f",
+  "note":"Byte-authoritative original is preserved in the verified frozen archive; this repository entry records the frozen protocol identity."
+}
