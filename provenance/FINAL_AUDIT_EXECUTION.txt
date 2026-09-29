@@ -1,0 +1,30 @@
+2026-09-29 — modern packaging verification, not historical benchmark execution.
+
+Initial local checks:
+- Archive download initially failed on restricted network; authorized retrieval then succeeded.
+- An archive-inspection attempt tried UTF-8 decoding a nested ZIP and stopped with UnicodeDecodeError; subsequent inspection restricted decoding to text members.
+- pytest initially unavailable; direct smoke import then found NetworkX unavailable.
+- Installed modern dependencies into an isolated temporary directory: NetworkX 3.7 and pytest 9.1.1. These are not claimed as historical versions.
+- A first local text export added trailing blank lines; JSONL parsing detected this. Re-exported all fetched files preserving their exact content, and checked every exported Git blob against the retrieved tree: zero mismatches. No such altered export was uploaded.
+
+Post-commit Track A readback:
+Fetched base64 content from mirror commit aed80c604e34a0e952aa1e9e9f9064a14b21b089.
+Decoded bytes == untouched v74 archive member: PASS.
+SHA-256: 429430fb692d2b2e36afd10da03330e93566906ae650b9362f12207f29dfcd91.
+315/315 validation flags; 45 x 7 unique calls; frozen median reproduced.
+
+Executed command:
+python3 repo/provenance/verify_mirror_and_records.py --archives canonical
+
+Output:
+PASS: Track A exact hash/length, 315 unique calls, 45 x 7, family IDs, frozen median
+PASS: Track C 21 batch records, 3 batches x 7, frozen median and descriptive quotient
+PASS: untouched archive integrity/identity, exact source/raw/reference copies, Track A aggregate recalculation
+Scope: record and packaging verification; no new theorem, historical timing run, or external review.
+
+Executed command:
+PYTHONPATH=/tmp/poset-audit-deps python3 -m pytest -q repo/tests
+
+Output:
+.. [100%]
+2 passed in 0.13s

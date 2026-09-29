@@ -1,3 +1,5 @@
+> Historical packaging-audit snapshot, retained without rewriting its findings. Its license and missing-artifact statements are superseded by LICENSE.md and FINAL_OUTSIDER_AUDIT_2026-09-29.md. It is not the current release assessment.
+
 # Outsider audit — 2026-09-29
 
 This is a repository-packaging audit, not a new mathematical or computational research checkpoint.

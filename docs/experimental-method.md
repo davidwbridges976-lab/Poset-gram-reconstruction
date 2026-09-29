@@ -4,7 +4,7 @@ The v74-v80 comparison sequence uses a fixed population of 45 structures generat
 
 ## Track A
 
-Track A takes G as input and performs independently validated poset reconstruction. At frozen checkpoint v74 there were 45 instances and 7 measured repetitions, giving 315 validated executions. All 315 were correct. One untimed warm-up per family was excluded from measured data. The median complete 45-instance workload was `0.051716411999223055 s`. The warm-up was a timing-control step, not an algorithmic prerequisite.
+Track A takes G as input and performs independently validated poset reconstruction. At frozen checkpoint v74 there were 45 instances and 7 measured repetitions, giving 315 validated executions. All 315 returned a successful target-isomorphism validation. The measured call includes this final validation, and success certifies that at least one retained candidate matches the target; it does not establish uniqueness. One untimed warm-up per family was excluded from measured data. The median complete 45-instance workload was `0.051716411999223055 s`. The warm-up was a timing-control step, not an algorithmic prerequisite.
 
 ## Track B: historical incomplete branch
 

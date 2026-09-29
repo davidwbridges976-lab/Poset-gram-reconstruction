@@ -12,6 +12,7 @@ Unless a file is expressly excluded below or carries a different notice, project
 - `src/comparators/wl2/CS_TrackC_2WL_Optimized_v78.py`
 - `historical-source/`
 - `tests/`
+- `provenance/verify_mirror_and_records.py`
 - `.github/workflows/`
 
 The complete GPLv3 text is in `COPYING`.

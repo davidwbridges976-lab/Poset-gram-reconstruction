@@ -95,10 +95,22 @@ The repository's GitHub Actions smoke-test workflow has completed successfully a
 
 This is a present-day executability check only. It is not part of the frozen v74 timing experiment and does not establish historical package-version identity.
 
-## Remaining packaging work
+## Exact raw mirror and remaining reproduction limits
 
-The main unresolved exact transfer is the original v74 `trackA_raw.jsonl` (315 records, 45,264 bytes, SHA-256 `429430fb692d2b2e36afd10da03330e93566906ae650b9362f12207f29dfcd91`).
+The original v74 `trackA_raw.jsonl` is now mirrored at `results/frozen/trackA_raw_v74.jsonl`: 315 records, 45,264 bytes, SHA-256 `429430fb692d2b2e36afd10da03330e93566906ae650b9362f12207f29dfcd91`. The committed copy was fetched and compared directly with the untouched archive bytes.
 
-A Track C v79 raw JSONL repository copy is present, along with readable v74/v79 summary and warm-up representations. Presence in the tree should not be confused with independently established byte identity: the untouched frozen archives remain authoritative until a repository copy is fetched and its SHA-256 is verified against the original.
+Track C raw output and warm-up, both executed sources, and the historical reference have verified exact copies. Track A summary/warm-up and Track C summary files remain readable representations, as recorded in `provenance/ARTIFACT_STATUS.md`.
 
-Missing original bytes are not reconstructed from aggregate statistics and presented as historical artifacts.
+The Track A measured function returns a boolean and includes the final target-isomorphism validation within its timer. Candidate generation uses G; the known target is used only for final validation. A successful boolean does not certify that every retained candidate is isomorphic to the target, nor that the candidate is unique.
+
+The Track C optimized function is present, but the curated tree does not contain a standalone original v79 benchmark driver. The archived v79 records and source permit inspection; they do not provide a complete one-command historical benchmark replay. No driver has been fabricated or labeled original.
+
+Verify the mirrored raw records and frozen descriptive medians with:
+
+```sh
+python provenance/verify_mirror_and_records.py
+```
+
+Optionally supply `--archives DIRECTORY` containing the untouched v74 and v80 ZIPs for archive-to-repository byte checks. The archive basenames required are recorded in that script. This is a modern packaging verification, not a new historical measurement.
+
+Exact historical package versions and hardware remain unestablished. Missing original bytes are never reconstructed from aggregate statistics and presented as historical artifacts.

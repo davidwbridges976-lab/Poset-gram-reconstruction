@@ -67,14 +67,21 @@ Verified byte-identical repository copies:
 
 Readable packaging representations that are **not** byte-identical to the authoritative originals remain labeled as representations. In particular, the repository v74 summary/warm-up representations do not have the authoritative originals' Git blob identities, and the repository v79 summary representation likewise differs from the preserved original. No research values are promoted on the basis of those representations.
 
-## Outstanding exact-artifact work
+## Completed Track A raw mirror — 2026-09-29
 
-The largest remaining exact transfer is the original v74 `trackA_raw.jsonl`: 315 records, 45,264 bytes, original SHA-256 `429430fb...`.
+The original v74 raw output is now stored at `results/frozen/trackA_raw_v74.jsonl` in mirror commit `aed80c604e34a0e952aa1e9e9f9064a14b21b089`.
 
-It is intentionally **not** being reconstructed from aggregate statistics. Until the original bytes can be transferred through a byte-preserving route and verified after upload, the frozen archive is authoritative and the repository checksum/provenance record points to it.
+- Original archive member: `trackA_raw.jsonl`.
+- Bytes: 45,264; records: 315.
+- SHA-256: `429430fb692d2b2e36afd10da03330e93566906ae650b9362f12207f29dfcd91`.
+- Git blob: `d09cad54369597fe1d9423d54836ab93b96abd31`.
+- The blob was created from original bytes using base64, committed without normalization, fetched back, decoded, and compared directly to the archive member. Exact equality passed.
+- The raw records reproduce all seven workload totals and the frozen median.
 
-Repository summary/warm-up files created during packaging are useful readable representations, but they are not labeled byte-identical to their frozen originals unless separately verified.
+The previous outstanding-transfer statement is preserved in the parent commit `fa7af522776c3fddde7c1ba237be272f7d49129d`. Its issue is now resolved; no original output was regenerated.
+
+Repository summary/warm-up representations retain their earlier classifications.
 
 ## Modern repository infrastructure
 
-`tests/`, `requirements*.txt`, and `.github/workflows/` are post-experiment reproducibility infrastructure. They do not alter any frozen checkpoint and must not be cited as historical experimental evidence.
+`tests/`, `requirements*.txt`, `.github/workflows/`, and `provenance/verify_mirror_and_records.py` are post-experiment infrastructure. They do not alter frozen checkpoints. The new verification script is licensed under the existing GPL-3.0-only software terms; its factual output is verification metadata.

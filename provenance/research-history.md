@@ -17,9 +17,9 @@ Accordingly, repository artifacts are classified as:
 
 The underlying problem asks whether the normalized principal-upset Gram matrix
 
-[
+$$
 G=D^{-1/2}ZZ^TD^{-1/2}
-]
+$$
 
 determines a finite poset up to isomorphism.
 
@@ -67,11 +67,11 @@ The frozen median complete-workload time was `0.562906189999012 s`.
 
 The ratio
 
-[
+$$
 \frac{0.562906189999012}{0.051716411999223055}
 =
 10.884478799640405
-]
+$$
 
 was frozen as a **descriptive timing quotient only**.
 

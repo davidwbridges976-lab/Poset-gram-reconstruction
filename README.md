@@ -6,9 +6,9 @@ Reproducibility repository for a finite-poset reconstruction program studying wh
 
 For a finite poset with zeta/incidence matrix (Z), set
 
-[
-K=ZZ^T,qquad D=operatorname{diag}(K),qquad G=D^{-1/2}KD^{-1/2}.
-]
+$$
+K=ZZ^T,\qquad D=\operatorname{diag}(K),\qquad G=D^{-1/2}KD^{-1/2}.
+$$
 
 The central question is whether (G), considered without a supplied labeling or compatible linear extension, determines the finite poset up to isomorphism.
 
@@ -28,10 +28,10 @@ On the frozen 45-structure population (seed `20260935`):
 
 v80 records the numerical quotient
 
-[
+$$
 0.562906189999012/0.051716411999223055
 =10.884478799640405.
-]
+$$
 
 **This is a descriptive timing quotient only.** Track A and Track C compute different defined outputs. It is not a same-task speedup, a proof of task equivalence, an asymptotic comparison, or an expressive-dominance result.
 
@@ -86,6 +86,8 @@ See `LICENSE.md` for the controlling scope notice and `COPYING` for the GPLv3 te
 
 ## Packaging status
 
-The principal unresolved exact-artifact transfer is the original v74 `trackA_raw.jsonl` (315 records; 45,264 bytes; SHA-256 `429430fb692d2b2e36afd10da03330e93566906ae650b9362f12207f29dfcd91`). It is intentionally not reconstructed from aggregate statistics.
+The original v74 raw output is mirrored exactly at `results/frozen/trackA_raw_v74.jsonl` (315 records; 45,264 bytes; SHA-256 `429430fb692d2b2e36afd10da03330e93566906ae650b9362f12207f29dfcd91`). Its bytes were extracted from the verified archive and fetched back from GitHub for comparison.
 
-The repository is currently private and no software license has yet been selected.
+The repository remains private. The controlling split-license notice is `LICENSE.md`; the historical 2-WL reference exclusion remains in force.
+
+See [the final packaging audit](provenance/FINAL_OUTSIDER_AUDIT_2026-09-29.md) for verified checks and remaining reproducibility limits.
