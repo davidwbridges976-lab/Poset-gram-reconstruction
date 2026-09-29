@@ -1,27 +1,80 @@
 # Poset–Gram Reconstruction
 
-Reproducibility repository for a finite-order reconstruction project.
+Reproducibility repository for a finite-poset reconstruction program studying whether normalized Gram-type data determine the underlying order structure.
 
-## Problem
+## Mathematical problem
 
-The computational direction studied here is `G -> Z`, where G is normalized Gram-type data derived from a finite order structure and Z denotes the underlying order/incidence structure.
+For a finite poset with zeta/incidence matrix (Z), set
 
-## Current frozen computational evidence
+[
+K=ZZ^T,qquad D=operatorname{diag}(K),qquad G=D^{-1/2}KD^{-1/2}.
+]
 
-The current packaged checkpoint is v80. On a frozen 45-structure population (seed `20260935`), Track A performed independently validated G-to-poset reconstruction over 7 repetitions: 315/315 validated reconstructions, with median complete 45-instance workload `0.051716411999223055 s`. Track C performed directed batch 2-WL refinement with shared palettes on same-n batches over 7 repetitions, with median complete 45-structure workload `0.562906189999012 s`.
+The central question is whether (G), considered without a supplied labeling or compatible linear extension, determines the finite poset up to isomorphism.
 
-The numerical quotient of those separately executed medians is `10.884478799640405`.
+The corresponding unnormalized products (M^TM), where (M=Z^{-1}), and (ZZ^T) have all-(n) reconstruction results through determinant-one principal minors. The additional diagonal normalization is the harder problem and **arbitrary-(n) injectivity remains open**.
 
-## Critical interpretation boundary
+See [the problem statement](docs/problem.md) and [mathematical foundation](docs/mathematics.md).
 
-That quotient is descriptive only. It is not evidence of a same-task speedup because Track A and Track C do not have an established common output/task criterion. This repository does not claim general expressive equivalence, asymptotic superiority, or expressive dominance.
+## Frozen computational evidence
 
-## Experimental discipline
+The packaged computational chain currently ends at **v80**.
 
-The underlying research record uses frozen checkpoints. Optimization, semantic-equivalence checks, and timing are separated so implementations are not tuned after comparative timing is observed. Track C's optimized 2-WL implementation was checked against the preserved reference before timing. On the specified historical controls and frozen workload, exact outputs, stabilization rounds, and state counts matched. This is a finite executed equivalence check, not a proof for arbitrary inputs.
+On the frozen 45-structure population (seed `20260935`):
 
-The cvc5 branch is retained as an incomplete historical experiment: 10 of 315 planned measured calls were executed and all 10 hit the external timeout. The remaining 305 were never executed, and no extrapolation is made.
+- **Track A / v74:** independently validated (G\to)poset reconstruction, seven repetitions, 315/315 measured reconstructions validated correct; median complete 45-instance workload `0.051716411999223055 s`.
+- **Track B / v75:** incomplete cvc5 experiment; exactly 10 of 315 planned measured calls executed and all 10 reached the configured timeout. The other 305 were never executed.
+- **Track C / v79:** directed batch 2-WL refinement with shared palettes on same-(n) batches, seven complete repetitions; median complete 45-structure workload `0.562906189999012 s`.
 
-## Status
+v80 records the numerical quotient
 
-This repository packages existing frozen evidence. Repository construction does not alter the frozen v80 research checkpoint. Source code will be added only from preserved executable artifacts whose provenance can be verified.
+[
+0.562906189999012/0.051716411999223055
+=10.884478799640405.
+]
+
+**This is a descriptive timing quotient only.** Track A and Track C compute different defined outputs. It is not a same-task speedup, a proof of task equivalence, an asymptotic comparison, or an expressive-dominance result.
+
+See [experimental method](docs/experimental-method.md) and [limitations](docs/limitations.md).
+
+## Reconstruction implementation
+
+The preserved v74 Track A implementation is:
+
+`src/reconstruction/CS_TrackA_Independent_Benchmark_v74.py`
+
+Its reconstruction path is documented in [algorithm.md](docs/algorithm.md). The preserved optimized Track C implementation and historical directed 2-WL reference are under `src/comparators/wl2/`.
+
+## Reproducing and auditing
+
+Start with [REPRODUCING.md](REPRODUCING.md). Modern smoke tests live under `tests/` and run in GitHub Actions on Python 3.11 and 3.12. These tests are new repository infrastructure, not retroactive historical evidence.
+
+Artifact identities and archive verification are recorded in:
+
+- [SHA-256 ledger](results/checksums/SHA256SUMS.txt)
+- [artifact-status guide](provenance/ARTIFACT_STATUS.md)
+- [frozen-checkpoint map](provenance/FROZEN_CHECKPOINTS.md)
+- [v74 archive verification](provenance/V74_ARCHIVE_VERIFICATION.md)
+- [Track C archive chain](provenance/TRACK_C_ARCHIVE_CHAIN.md)
+- [v80 archive verification](provenance/V80_ARCHIVE_VERIFICATION.md)
+- [research history](provenance/research-history.md)
+
+The untouched frozen archives remain byte-authoritative wherever an individual repository copy has not independently been verified byte-for-byte.
+
+## Evidence boundary
+
+This repository deliberately separates:
+
+1. all-(n) mathematical results;
+2. finite computational evidence;
+3. open normalized-reconstruction questions;
+4. historical/pre-freeze artifacts; and
+5. modern repository/testing infrastructure.
+
+No finite benchmark is promoted into an arbitrary-(n) theorem, and later mathematical developments are not back-imported into earlier computational checkpoints.
+
+## Packaging status
+
+The principal unresolved exact-artifact transfer is the original v74 `trackA_raw.jsonl` (315 records; 45,264 bytes; SHA-256 `429430fb692d2b2e36afd10da03330e93566906ae650b9362f12207f29dfcd91`). It is intentionally not reconstructed from aggregate statistics.
+
+The repository is currently private and no software license has yet been selected.
