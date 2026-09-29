@@ -6,10 +6,10 @@ This document describes the executed Track A v74 reconstruction path. It is an i
 
 For each frozen test poset with zeta matrix (Z), the benchmark constructs
 
-[
+$
 K=ZZ^T,qquad d=\operatorname{diag}(K),qquad
 G=K/\sqrt{dd^T}.
-]
+$
 
 The engine receives (G). The original (Z) is retained only as a validation target: successful reconstruction means that at least one recovered incidence matrix is isomorphic to the target poset.
 
@@ -25,17 +25,17 @@ The v74 implementation uses NetworkX `find_cliques`; this is an exact clique-enu
 
 For every candidate (J) and every label (x), collect the positive entries
 
-[
+$
 \{G_{xj}:j\in J, G_{xj}>0\}.
-]
+$
 
 The candidate is rejected unless this collection is nonempty and numerically constant for every (x).
 
 For its common value (g_x), propose
 
-[
+$
 d_x=\frac{1}{g_x^2}.
-]
+$
 
 The executed implementation requires this value to be within tolerance of an integer between (1) and (n).
 
@@ -43,15 +43,15 @@ The executed implementation requires this value to be within tolerance of an int
 
 Compute the diagonal of (G^{-1}). For each proposed (d_x), the v74 code requires
 
-[
+$
 d_x\le (G^{-1})_{xx}
-]
+$
 
 within tolerance and requires
 
-[
+$
 \frac{(G^{-1})_{xx}}{d_x}
-]
+$
 
 to be numerically integral.
 
@@ -61,9 +61,9 @@ This is a rejection filter: a candidate failing it does not proceed.
 
 The candidate scale vector must satisfy the numerical identity
 
-[
+$
 \prod_x d_x=\frac{1}{\det G}.
-]
+$
 
 The implementation checks this with a floating-point tolerance.
 
@@ -71,9 +71,9 @@ The implementation checks this with a floating-point tolerance.
 
 Construct
 
-[
+$
 K_f=G\odot\sqrt{dd^T}.
-]
+$
 
 Round entrywise to an integer matrix (K), rejecting the candidate unless every entry of (K_f) is sufficiently close to its rounded integer.
 
@@ -81,17 +81,17 @@ Round entrywise to an integer matrix (K), rejecting the candidate unless every e
 
 The executed engine proposes an incidence matrix directly from equality with the diagonal:
 
-[
+$
 Z^{(r)}_{xy}
 =
 \mathbf 1[K_{xy}=K_{yy}].
-]
+$
 
 It then requires exact integer closure:
 
-[
+$
 K=Z^{(r)}(Z^{(r)})^T.
-]
+$
 
 Only candidates satisfying this identity are retained.
 
