@@ -1,0 +1,145 @@
+{
+  "checkpoint": "v78",
+  "title": "Track C \u2014 Optimized 2-WL Semantic-Equivalence Verification",
+  "status": "PASS__OPTIMIZED_2WL_EXACTLY_MATCHES_REFERENCE_ON_CONTROLS_AND_FROZEN_WORKLOAD",
+  "predecessor": {
+    "file": "CS_Quarantine_Branch_TrackC-2WL-Implementation-Audit_v77_FROZEN.zip",
+    "sha256": "4c8c25c28b21bb39106df0327ae0660922259e0bb582a79276d73b1eb8dc6cfb"
+  },
+  "reference": {
+    "file": "cs_ao4_wl_power_result.py",
+    "sha256": "c02dfc41a5217ee106d314f79d7cc12e2433df10bc6677850e9f3980eee78135",
+    "function": "batch_kwl(..., k=2)"
+  },
+  "optimized": {
+    "file": "CS_TrackC_2WL_Optimized_v78.py",
+    "sha256": "e027b937b9b403f7f7427f22da038b8a7d3ace7f1cd2218e1e0c2b50ec4a581c",
+    "function": "batch_2wl_optimized"
+  },
+  "historical_controls": [
+    {
+      "family": "3x3",
+      "matrices": 512,
+      "exact_output_equal": true,
+      "reference_classes": 36,
+      "optimized_classes": 36,
+      "expected_classes": 36,
+      "rounds_equal": true,
+      "states_equal": true
+    },
+    {
+      "family": "3x4",
+      "matrices": 4096,
+      "exact_output_equal": true,
+      "reference_classes": 87,
+      "optimized_classes": 87,
+      "expected_classes": 87,
+      "rounds_equal": true,
+      "states_equal": true
+    },
+    {
+      "family": "4x3",
+      "matrices": 4096,
+      "exact_output_equal": true,
+      "reference_classes": 87,
+      "optimized_classes": 87,
+      "expected_classes": 87,
+      "rounds_equal": true,
+      "states_equal": true
+    }
+  ],
+  "frozen_45_workload_same_n_batches": [
+    {
+      "n": 8,
+      "instances": 6,
+      "indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "exact_output_equal": true,
+      "rounds_reference": 2,
+      "rounds_optimized": 2,
+      "states_reference": 64,
+      "states_optimized": 64
+    },
+    {
+      "n": 10,
+      "instances": 2,
+      "indices": [
+        6,
+        7
+      ],
+      "exact_output_equal": true,
+      "rounds_reference": 3,
+      "rounds_optimized": 3,
+      "states_reference": 100,
+      "states_optimized": 100
+    },
+    {
+      "n": 16,
+      "instances": 37,
+      "indices": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44
+      ],
+      "exact_output_equal": true,
+      "rounds_reference": 4,
+      "rounds_optimized": 4,
+      "states_reference": 256,
+      "states_optimized": 256
+    }
+  ],
+  "verification": {
+    "all_historical_controls_exact_output_equal": true,
+    "all_frozen_batches_exact_output_equal": true,
+    "rounds_and_state_counts_equal": true
+  },
+  "benchmark_executions": 0,
+  "performance_observations": 0,
+  "firewall": [
+    "Equivalence is finite/executed over specified controls and frozen workload, not an arbitrary-input proof.",
+    "No Track C timing was measured during optimization/equivalence verification.",
+    "No post-timing optimization is permitted once Track C timing begins.",
+    "2-WL remains a different task boundary from full G-to-poset reconstruction unless separately established."
+  ],
+  "next": "Fresh Track C timing benchmark using this frozen optimized implementation under v76/v77 timing rules."
+}
