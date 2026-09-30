@@ -88,6 +88,10 @@ See `LICENSE.md` for the controlling scope notice and `COPYING` for the GPLv3 te
 
 The original v74 raw output is mirrored exactly at `results/frozen/trackA_raw_v74.jsonl` (315 records; 45,264 bytes; SHA-256 `429430fb692d2b2e36afd10da03330e93566906ae650b9362f12207f29dfcd91`). Its bytes were extracted from the verified archive and fetched back from GitHub for comparison.
 
-The repository remains private. The controlling split-license notice is `LICENSE.md`; the historical 2-WL reference exclusion remains in force.
+The repository is public. The controlling split-license notice is `LICENSE.md`; the historical 2-WL reference exclusion remains in force.
 
 See [the final packaging audit](provenance/FINAL_OUTSIDER_AUDIT_2026-09-29.md) for verified checks and remaining reproducibility limits.
+
+## Later bounded experiments
+
+Two n=15 experimental packets, including an exact timed rerun, are documented in [the n15 experiment guide](results/experimental/n15/README.md). Both returned 68/68 target matches on the same fixed population. They remain finite experimental evidence, separate from the frozen v74–v80 benchmarks, and do not establish unique reconstruction.
