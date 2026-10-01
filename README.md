@@ -2,6 +2,10 @@
 
 Reproducibility repository for a finite-poset reconstruction program studying whether normalized Gram-type data determine the underlying order structure.
 
+## Reading guide
+
+Start with [the abstract, open problems and reading map](docs/research-guide.md). It distinguishes the external mathematical audit at v120 from this repository's preserved computational checkpoints.
+
 ## Mathematical problem
 
 For a finite poset with zeta/incidence matrix $Z$, set
