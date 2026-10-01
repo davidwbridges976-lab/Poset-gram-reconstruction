@@ -4,15 +4,15 @@ Reproducibility repository for a finite-poset reconstruction program studying wh
 
 ## Mathematical problem
 
-For a finite poset with zeta/incidence matrix (Z), set
+For a finite poset with zeta/incidence matrix $Z$, set
 
 $$
-K=ZZ^T,\qquad D=\operatorname{diag}(K),\qquad G=D^{-1/2}KD^{-1/2}.
+K=ZZ^T,\qquad D=\mathrm{diag}(K),\qquad G=D^{-1/2}KD^{-1/2}.
 $$
 
-The central question is whether (G), considered without a supplied labeling or compatible linear extension, determines the finite poset up to isomorphism.
+The central question is whether $G$, considered without a supplied labeling or compatible linear extension, determines the finite poset up to isomorphism.
 
-The corresponding unnormalized products (M^TM), where (M=Z^{-1}), and (ZZ^T) have all-(n) reconstruction results through determinant-one principal minors. The additional diagonal normalization is the harder problem and **arbitrary-(n) injectivity remains open**.
+The corresponding unnormalized products $M^T M$, where $M=Z^{-1}$, and $ZZ^T$ have all-$n$ reconstruction results through determinant-one principal minors. The additional diagonal normalization is the harder problem and **arbitrary-$n$ injectivity remains open**.
 
 See [the problem statement](docs/problem.md) and [mathematical foundation](docs/mathematics.md).
 
@@ -22,9 +22,9 @@ The packaged computational chain currently ends at **v80**.
 
 On the frozen 45-structure population (seed `20260935`):
 
-- **Track A / v74:** independently validated (G\to)poset reconstruction, seven repetitions, 315/315 measured reconstructions validated correct; median complete 45-instance workload `0.051716411999223055 s`.
+- **Track A / v74:** independently validated $G \to$ poset reconstruction, seven repetitions, 315/315 measured reconstructions validated correct; median complete 45-instance workload `0.051716411999223055 s`.
 - **Track B / v75:** incomplete cvc5 experiment; exactly 10 of 315 planned measured calls executed and all 10 reached the configured timeout. The other 305 were never executed.
-- **Track C / v79:** directed batch 2-WL refinement with shared palettes on same-(n) batches, seven complete repetitions; median complete 45-structure workload `0.562906189999012 s`.
+- **Track C / v79:** directed batch 2-WL refinement with shared palettes on same-$n$ batches, seven complete repetitions; median complete 45-structure workload `0.562906189999012 s`.
 
 v80 records the numerical quotient
 
@@ -65,13 +65,13 @@ The untouched frozen archives remain byte-authoritative wherever an individual r
 
 This repository deliberately separates:
 
-1. all-(n) mathematical results;
+1. all-$n$ mathematical results;
 2. finite computational evidence;
 3. open normalized-reconstruction questions;
 4. historical/pre-freeze artifacts; and
 5. modern repository/testing infrastructure.
 
-No finite benchmark is promoted into an arbitrary-(n) theorem, and later mathematical developments are not back-imported into earlier computational checkpoints.
+No finite benchmark is promoted into an arbitrary-$n$ theorem, and later mathematical developments are not back-imported into earlier computational checkpoints.
 
 ## License
 
