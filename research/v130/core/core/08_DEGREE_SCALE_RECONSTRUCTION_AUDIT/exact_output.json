@@ -1,0 +1,98 @@
+{
+  "two_chain_exhaustive_size_vectors_checked": 4,
+  "two_chain_passing_candidates": [
+    {
+      "sizes": [
+        1,
+        2
+      ],
+      "Z": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "degree_multiset": [
+        1,
+        1
+      ],
+      "degree_vector": [
+        1,
+        1
+      ]
+    },
+    {
+      "sizes": [
+        2,
+        1
+      ],
+      "Z": [
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "degree_multiset": [
+        1,
+        1
+      ],
+      "degree_vector": [
+        1,
+        1
+      ]
+    }
+  ],
+  "two_chain_distinct_labeled_sizes_but_isomorphic": true,
+  "original_pair_only": {
+    "P_sizes_sum": 81,
+    "Q_sizes_sum": 81,
+    "both_valid_for_same_q": true,
+    "P_degree_multiset": [
+      5,
+      5,
+      5,
+      6,
+      6,
+      6,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      9,
+      10,
+      15,
+      15
+    ],
+    "Q_degree_multiset": [
+      5,
+      6,
+      6,
+      6,
+      6,
+      6,
+      7,
+      7,
+      8,
+      8,
+      8,
+      8,
+      8,
+      11,
+      15,
+      15
+    ],
+    "same_degrees": false,
+    "candidates_from_original_pair_surviving_P_degree_data": 1
+  },
+  "scope": "n=2 size enumeration exhaustive; n=16 only original two candidates evaluated, not entire fiber"
+}

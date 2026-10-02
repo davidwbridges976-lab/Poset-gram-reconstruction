@@ -1,0 +1,181 @@
+{
+  "scope": "All positive-entry finite-poset Gram inputs through n=8, via all compatible linear extensions; no general-n claim",
+  "records": [
+    {
+      "n": 1,
+      "raw_masks": 1,
+      "transitive_sources": 1,
+      "anchors_checked": 1,
+      "valid_anchors": 1,
+      "matching_degree_anchors": 1,
+      "different_degree_anchors": 0,
+      "nonisomorphic_matching_degree_anchors": 0,
+      "valid_anchor_histogram": {
+        "1": 1
+      },
+      "rejections": {
+        "integer": 0,
+        "poset": 0,
+        "rows": 0,
+        "gram": 0
+      },
+      "ledger_sha256": "0fbed8f6e1470adf6a10761c7eac57d4f5a0938f36718f4e3d1d7167d1bbfd91",
+      "seconds": 8.902399997623434e-05
+    },
+    {
+      "n": 2,
+      "raw_masks": 1,
+      "transitive_sources": 1,
+      "anchors_checked": 2,
+      "valid_anchors": 2,
+      "matching_degree_anchors": 2,
+      "different_degree_anchors": 0,
+      "nonisomorphic_matching_degree_anchors": 0,
+      "valid_anchor_histogram": {
+        "2": 1
+      },
+      "rejections": {
+        "integer": 0,
+        "poset": 0,
+        "rows": 0,
+        "gram": 0
+      },
+      "ledger_sha256": "88e6d7ae7575fca1d49d960352c5f595c89f005f563e8ccca8d77126ebedef7b",
+      "seconds": 7.354000001669192e-05
+    },
+    {
+      "n": 3,
+      "raw_masks": 2,
+      "transitive_sources": 2,
+      "anchors_checked": 6,
+      "valid_anchors": 2,
+      "matching_degree_anchors": 2,
+      "different_degree_anchors": 0,
+      "nonisomorphic_matching_degree_anchors": 0,
+      "valid_anchor_histogram": {
+        "1": 2
+      },
+      "rejections": {
+        "integer": 4,
+        "poset": 0,
+        "rows": 0,
+        "gram": 0
+      },
+      "ledger_sha256": "bcd7057fb573cc3c100110a039905e05067de82a5862d921b54414b2ce530fb8",
+      "seconds": 8.112199998322467e-05
+    },
+    {
+      "n": 4,
+      "raw_masks": 8,
+      "transitive_sources": 7,
+      "anchors_checked": 28,
+      "valid_anchors": 10,
+      "matching_degree_anchors": 10,
+      "different_degree_anchors": 0,
+      "nonisomorphic_matching_degree_anchors": 0,
+      "valid_anchor_histogram": {
+        "1": 6,
+        "4": 1
+      },
+      "rejections": {
+        "integer": 15,
+        "poset": 0,
+        "rows": 3,
+        "gram": 0
+      },
+      "ledger_sha256": "d3c15073a27ff2a327000afeb822588328fd091a97a510a6cb20f4b98c8bd2e0",
+      "seconds": 0.00045744700000227567
+    },
+    {
+      "n": 5,
+      "raw_masks": 64,
+      "transitive_sources": 40,
+      "anchors_checked": 200,
+      "valid_anchors": 45,
+      "matching_degree_anchors": 45,
+      "different_degree_anchors": 0,
+      "nonisomorphic_matching_degree_anchors": 0,
+      "valid_anchor_histogram": {
+        "1": 35,
+        "2": 5
+      },
+      "rejections": {
+        "integer": 141,
+        "poset": 0,
+        "rows": 14,
+        "gram": 0
+      },
+      "ledger_sha256": "c908a60033c9ce5cea15242e2837803cf935e5e5cb69ad419781c12062b7ee81",
+      "seconds": 0.00263268599999833
+    },
+    {
+      "n": 6,
+      "raw_masks": 1024,
+      "transitive_sources": 357,
+      "anchors_checked": 2142,
+      "valid_anchors": 396,
+      "matching_degree_anchors": 396,
+      "different_degree_anchors": 0,
+      "nonisomorphic_matching_degree_anchors": 0,
+      "valid_anchor_histogram": {
+        "1": 318,
+        "2": 39
+      },
+      "rejections": {
+        "integer": 1533,
+        "poset": 0,
+        "rows": 210,
+        "gram": 3
+      },
+      "ledger_sha256": "ad5dfcf5f37079a770fa2eeb637bc812b6aafe8cd165198dc09c2235985f71bf",
+      "seconds": 0.029899593999999752
+    },
+    {
+      "n": 7,
+      "raw_masks": 32768,
+      "transitive_sources": 4824,
+      "anchors_checked": 33768,
+      "valid_anchors": 4992,
+      "matching_degree_anchors": 4992,
+      "different_degree_anchors": 0,
+      "nonisomorphic_matching_degree_anchors": 0,
+      "valid_anchor_histogram": {
+        "1": 4656,
+        "2": 168
+      },
+      "rejections": {
+        "integer": 27084,
+        "poset": 0,
+        "rows": 1668,
+        "gram": 24
+      },
+      "ledger_sha256": "e09aa7720126909ae7bd09a7bb28677527f7a6befbbcb0b0356db56a64ed6851",
+      "seconds": 0.5000351049999949
+    },
+    {
+      "n": 8,
+      "raw_masks": 2097152,
+      "transitive_sources": 96428,
+      "anchors_checked": 771424,
+      "valid_anchors": 98114,
+      "matching_degree_anchors": 98114,
+      "different_degree_anchors": 0,
+      "nonisomorphic_matching_degree_anchors": 0,
+      "valid_anchor_histogram": {
+        "1": 94790,
+        "2": 1630,
+        "8": 8
+      },
+      "rejections": {
+        "integer": 616290,
+        "poset": 1535,
+        "rows": 55270,
+        "gram": 215
+      },
+      "ledger_sha256": "8c1b3f5d61d11b790eb7463d864cff8d75e1082999da8b5ebeba52426ce718fd",
+      "seconds": 15.703781891000006
+    }
+  ],
+  "counterexamples": [],
+  "total_seconds": 16.23734276899998
+}

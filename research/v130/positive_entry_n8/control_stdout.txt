@@ -1,0 +1,1 @@
+{"known_G_only_collision_detected": true, "nonisomorphism_detected": true, "degree_difference_detected": true, "valid_anchors": [8, 15], "rejections": {"integer": 6, "poset": 0, "rows": 8, "gram": 0}, "P_degrees": [5, 5, 5, 6, 6, 6, 8, 8, 8, 8, 8, 8, 9, 10, 15, 15], "Q_degrees": [5, 6, 6, 6, 6, 6, 7, 7, 8, 8, 8, 8, 8, 11, 15, 15]}

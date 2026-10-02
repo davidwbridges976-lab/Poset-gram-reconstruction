@@ -114,3 +114,7 @@ python provenance/verify_mirror_and_records.py
 Optionally supply `--archives DIRECTORY` containing the untouched v74 and v80 ZIPs for archive-to-repository byte checks. The archive basenames required are recorded in that script. This is a modern packaging verification, not a new historical measurement.
 
 Exact historical package versions and hardware remain unestablished. Missing original bytes are never reconstructed from aggregate statistics and presented as historical artifacts.
+
+## Current mathematics at v130
+
+For the exact counterexample, complete original-fiber audit, degree/scale checks and complete positive-entry n<=8 verification, use [research/v130/README.md](research/v130/README.md). These newly included sources use Python standard library only and are separate from the frozen benchmarks described above.

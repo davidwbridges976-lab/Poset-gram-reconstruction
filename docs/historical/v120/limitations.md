@@ -13,7 +13,3 @@ This repository separates finite computational evidence from general mathematica
 * Track A's measured function includes target-isomorphism validation and returns a boolean. It does not expose a target-free public reconstruction API or certify unique recovery on the workload.
 * The curated tree lacks the original standalone v79 benchmark driver. Historical timing replay is therefore incomplete despite exact source/raw preservation.
 * The reported exhaustive normalized-G check through n <= 8 belongs to the larger research record; its exhaustive enumerator and outputs are not included or independently revalidated by this packaging audit.
-
-## Mathematical status update at v130
-
-Universal G-only injectivity is false by the exact 16-element counterexample. General G-plus-degree injectivity is unresolved in this project. The newer repository addition includes an exhaustive positive-entry-only n<=8 generator and independent verifier; the historical limitation above refers to the earlier broader enumeration and its original packaging audit. The new finite test is not an all-n theorem. The old Track A/B/C sources and timing records are unchanged.

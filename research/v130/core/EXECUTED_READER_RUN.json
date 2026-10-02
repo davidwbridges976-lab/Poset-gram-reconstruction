@@ -1,0 +1,26 @@
+[
+  {
+    "script": "verify_counterexample.py",
+    "exit_code": 0,
+    "stdout": "{\n  \"valid_posets\": true,\n  \"all_256_Gram_entries_equal_exactly\": true,\n  \"nonisomorphic_by_upset_two_downset_sizes\": {\n    \"P\": [\n      5,\n      8,\n      9,\n      10\n    ],\n    \"Q\": [\n      6,\n      7,\n      8,\n      11\n    ]\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "script": "core/08_DEGREE_SCALE_RECONSTRUCTION_AUDIT/check.py",
+    "exit_code": 0,
+    "stdout": "{\n  \"two_chain_exhaustive_size_vectors_checked\": 4,\n  \"two_chain_passing_candidates\": [\n    {\n      \"sizes\": [\n        1,\n        2\n      ],\n      \"Z\": [\n        [\n          1,\n          0\n        ],\n        [\n          1,\n          1\n        ]\n      ],\n      \"degree_multiset\": [\n        1,\n        1\n      ],\n      \"degree_vector\": [\n        1,\n        1\n      ]\n    },\n    {\n      \"sizes\": [\n        2,\n        1\n      ],\n      \"Z\": [\n        [\n          1,\n          1\n        ],\n        [\n          0,\n          1\n        ]\n      ],\n      \"degree_multiset\": [\n        1,\n        1\n      ],\n      \"degree_vector\": [\n        1,\n        1\n      ]\n    }\n  ],\n  \"two_chain_distinct_labeled_sizes_but_isomorphic\": true,\n  \"original_pair_only\": {\n    \"P_sizes_sum\": 81,\n    \"Q_sizes_sum\": 81,\n    \"both_valid_for_same_q\": true,\n    \"P_degree_multiset\": [\n      5,\n      5,\n      5,\n      6,\n      6,\n      6,\n      8,\n      8,\n      8,\n      8,\n      8,\n      8,\n      9,\n      10,\n      15,\n      15\n    ],\n    \"Q_degree_multiset\": [\n      5,\n      6,\n      6,\n      6,\n      6,\n      6,\n      7,\n      7,\n      8,\n      8,\n      8,\n      8,\n      8,\n      11,\n      15,\n      15\n    ],\n    \"same_degrees\": false,\n    \"candidates_from_original_pair_surviving_P_degree_data\": 1\n  },\n  \"scope\": \"n=2 size enumeration exhaustive; n=16 only original two candidates evaluated, not entire fiber\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "script": "core/09_ORIGINAL_FIBER_MAXIMUM_ANCHOR/check.py",
+    "exit_code": 0,
+    "stdout": "{\n  \"scope\": \"All 16 maximum anchors; complete labeled realization fiber of original positive-entry G\",\n  \"status_counts\": {\n    \"row_sizes_rejected\": 8,\n    \"integer_size_rejected\": 6,\n    \"valid\": 2\n  },\n  \"valid_anchor_count\": 2,\n  \"valid_P_degree_count\": 1,\n  \"valid_Q_degree_count\": 1\n}\n[(8, 'Q'), (15, 'P')]\n",
+    "stderr": ""
+  },
+  {
+    "script": "core/09_ORIGINAL_FIBER_MAXIMUM_ANCHOR/verify.py",
+    "exit_code": 0,
+    "stdout": "{\n  \"all_16_anchors_independently_verified\": true,\n  \"status_counts\": {\n    \"row_sizes_rejected\": 8,\n    \"integer_size_rejected\": 6,\n    \"valid\": 2\n  },\n  \"valid_matrices_exactly_original_Q_at_8_and_P_at_15\": true\n}\n",
+    "stderr": ""
+  }
+]

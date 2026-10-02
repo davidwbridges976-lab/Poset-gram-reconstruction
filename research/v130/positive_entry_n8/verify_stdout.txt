@@ -1,0 +1,8 @@
+{"n": 1, "transitive_sources": 1, "valid_anchors": 1, "matching_degree_anchors": 1, "nonisomorphic_matching_degree_anchors": 0, "valid_anchor_histogram": {"1": 1}, "rejections": {}}
+{"n": 2, "transitive_sources": 1, "valid_anchors": 2, "matching_degree_anchors": 2, "nonisomorphic_matching_degree_anchors": 0, "valid_anchor_histogram": {"2": 1}, "rejections": {}}
+{"n": 3, "transitive_sources": 2, "valid_anchors": 2, "matching_degree_anchors": 2, "nonisomorphic_matching_degree_anchors": 0, "valid_anchor_histogram": {"1": 2}, "rejections": {"integer": 4}}
+{"n": 4, "transitive_sources": 7, "valid_anchors": 10, "matching_degree_anchors": 10, "nonisomorphic_matching_degree_anchors": 0, "valid_anchor_histogram": {"1": 6, "4": 1}, "rejections": {"rows": 3, "integer": 15}}
+{"n": 5, "transitive_sources": 40, "valid_anchors": 45, "matching_degree_anchors": 45, "nonisomorphic_matching_degree_anchors": 0, "valid_anchor_histogram": {"1": 35, "2": 5}, "rejections": {"rows": 14, "integer": 141}}
+{"n": 6, "transitive_sources": 357, "valid_anchors": 396, "matching_degree_anchors": 396, "nonisomorphic_matching_degree_anchors": 0, "valid_anchor_histogram": {"1": 318, "2": 39}, "rejections": {"rows": 210, "integer": 1533, "gram": 3}}
+{"n": 7, "transitive_sources": 4824, "valid_anchors": 4992, "matching_degree_anchors": 4992, "nonisomorphic_matching_degree_anchors": 0, "valid_anchor_histogram": {"1": 4656, "2": 168}, "rejections": {"rows": 1668, "integer": 27084, "gram": 24}}
+{"n": 8, "transitive_sources": 96428, "valid_anchors": 98114, "matching_degree_anchors": 98114, "nonisomorphic_matching_degree_anchors": 0, "valid_anchor_histogram": {"1": 94790, "2": 1630, "8": 8}, "rejections": {"rows": 55270, "integer": 616290, "poset": 1535, "gram": 215}}

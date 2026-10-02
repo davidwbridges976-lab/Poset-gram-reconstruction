@@ -4,11 +4,7 @@ Reproducibility repository for a finite-poset reconstruction program studying wh
 
 ## Reading guide
 
-Start with the [10-page current mathematics PDF](docs/current/Audit10_Current_Mathematics_v130.pdf) or the [research guide](docs/research-guide.md). The mathematical record is frozen at v130; the older v74-v80 computational benchmarks remain separate historical experiments.
-
-**Current status:** normalized Gram data $G$ alone do **not** determine every finite poset. An exact 16-element nonisomorphic pair has identical $G$. For this entire Gram fiber, the comparability-degree multiset separates the two realizations. Whether $G$ together with the unordered comparability-degree multiset determines every finite poset remains **unresolved in this project**. No literature-wide open-problem or novelty claim is made.
-
-[Counterexample note](docs/current/Counterexample_Note.pdf) · [Exact verification](research/v130/README.md) · [Historical v120 guide](docs/historical/v120/research-guide.md)
+Start with [the abstract, open problems and reading map](docs/research-guide.md). It distinguishes the external mathematical audit at v120 from this repository's preserved computational checkpoints.
 
 ## Mathematical problem
 
@@ -18,9 +14,9 @@ $$
 K=ZZ^T,\qquad D=\mathrm{diag}(K),\qquad G=D^{-1/2}KD^{-1/2}.
 $$
 
-The original question was whether $G$, considered up to simultaneous row and column permutation and without a supplied compatible linear extension, determines the finite poset up to isomorphism. The verified counterexample answers this in the negative. The current target adds the unordered comparability-degree multiset.
+The central question is whether $G$, considered without a supplied labeling or compatible linear extension, determines the finite poset up to isomorphism.
 
-The unnormalized matrix $K=ZZ^T$ recovers order directly by $x\le y$ iff $K_{xy}=K_{yy}$. Labeled upset sizes together with $G$ also recover order. The historical principal-minor results are preserved in [the mathematical foundation](docs/mathematics.md); they do not establish uniqueness for normalized $G$.
+The corresponding unnormalized products $M^T M$, where $M=Z^{-1}$, and $ZZ^T$ have all-$n$ reconstruction results through determinant-one principal minors. The additional diagonal normalization is the harder problem and **arbitrary-$n$ injectivity remains open**.
 
 See [the problem statement](docs/problem.md) and [mathematical foundation](docs/mathematics.md).
 
@@ -75,7 +71,7 @@ This repository deliberately separates:
 
 1. all-$n$ mathematical results;
 2. finite computational evidence;
-3. the refuted general $G$-only claim and unresolved richer-invariant questions;
+3. open normalized-reconstruction questions;
 4. historical/pre-freeze artifacts; and
 5. modern repository/testing infrastructure.
 
@@ -103,9 +99,3 @@ See [the final packaging audit](provenance/FINAL_OUTSIDER_AUDIT_2026-09-29.md) f
 ## Later bounded experiments
 
 Two n=15 experimental packets, including an exact timed rerun, are documented in [the n15 experiment guide](results/experimental/n15/README.md). Both returned 68/68 target matches on the same fixed population. They remain finite experimental evidence, separate from the frozen v74–v80 benchmarks, and do not establish unique reconstruction.
-
-## Current mathematical evidence (v130)
-
-The repository now includes the exact counterexample, complete original-fiber anchor enumeration, approved degree/scale audit, and independent exhaustive positive-entry verification through eight elements. The latter covers 101,660 orders in compatible labelings and 807,571 anchor checks; these are not counts of unlabeled posets or distinct Gram matrices. Every valid anchor is isomorphic to its source. This independently confirms older finite evidence and does not narrow the general larger-n obstruction.
-
-See [the current reproduction map](research/v130/README.md) and [update provenance](provenance/MATHEMATICAL_STATUS_UPDATE_v130.md). The old computational records and licensing exclusion remain unchanged.

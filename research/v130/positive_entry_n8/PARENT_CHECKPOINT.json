@@ -1,0 +1,10 @@
+{
+  "canonical_checkpoint": "v129",
+  "full_archive_filename": "Audit10_Degree_Scale_Maximum_Anchor_Import_Audit_v129_FROZEN.zip",
+  "full_archive_sha256": "744f2816f25dddd5f26cd15e0634f7d935100985c6efc00cf186150a7a901df8",
+  "full_archive_library_file_id": "libfile_dc37dcbb63188191858522ef213c277b",
+  "canonical_pdf": "Audit10_Degree_Scale_Maximum_Anchor_Import_Audit_CANONICAL_v129.pdf",
+  "canonical_pdf_pages": 313,
+  "canonical_pdf_sha256": "8a85850d830ca5360876f016631669886249beb047cff36acdcc1ce053d99a3d",
+  "scope": "Reader selection only; full canonical history remains authoritative"
+}

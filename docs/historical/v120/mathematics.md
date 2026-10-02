@@ -1,6 +1,6 @@
 # Mathematical foundation
 
-This note preserves the historical principal-minor foundation. The current directly justified surviving results and review boundaries are in [the 10-page PDF](current/Audit10_Current_Mathematics_v130.pdf). The mathematical status was corrected at v130: universal G-only injectivity is false; general G-plus-degree injectivity remains unresolved in this project. This update does not globally re-audit the historical principal-minor proof.
+This note records the proved principal-minor reconstruction layer that sits beneath the harder normalized reconstruction problem.
 
 ## Zeta and Möbius matrices
 
@@ -75,7 +75,7 @@ $$
 G=D^{-1/2}ZZ^TD^{-1/2},
 $$
 
-where (D_{xx}=|U_x|). Diagonal normalization removes directly visible absolute cone sizes. The verified 16-element counterexample now shows that normalized G does not determine every finite poset. The current unresolved question adds the unordered comparability-degree multiset. See [the current problem statement](problem.md).
+where (D_{xx}=|U_x|). Diagonal normalization removes directly visible absolute cone sizes. Establishing that this normalized data still forces the poset for arbitrary finite (n) is the open problem.
 
 ## Literature/novelty boundary
 

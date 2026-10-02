@@ -1,0 +1,9 @@
+{
+  "base_commit": "764a2eafc92f3d5dc46d81506fca4c7a2bf318f7",
+  "core_runner": "PASS",
+  "known_collision_control": "PASS",
+  "imported_evidence_checksums": "PASS",
+  "current_facing_local_links": "PASS",
+  "benchmark_pytest": "NOT RUN: pytest unavailable; existing benchmark sources unchanged",
+  "mathematical_attack": "NONE; publication/reproducibility checks only"
+}

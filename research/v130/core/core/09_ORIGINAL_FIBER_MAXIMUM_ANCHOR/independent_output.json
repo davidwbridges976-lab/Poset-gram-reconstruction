@@ -1,0 +1,9 @@
+{
+  "all_16_anchors_independently_verified": true,
+  "status_counts": {
+    "row_sizes_rejected": 8,
+    "integer_size_rejected": 6,
+    "valid": 2
+  },
+  "valid_matrices_exactly_original_Q_at_8_and_P_at_15": true
+}

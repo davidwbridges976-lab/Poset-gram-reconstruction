@@ -1,0 +1,16 @@
+{
+  "checkpoint": "v130 organization revision",
+  "current_pdf_pages": 10,
+  "historical_pdf_pages": 316,
+  "source_physical_pages_311_to_316": "Preserved in current pages 5-10, same page text and original page objects",
+  "historical_pdf_sha256": "2857afe5a2b6d55c9ea7d345ff65d2d00d537b7b5c2d88aa6772dde58c0447b3",
+  "historical_zip_sha256": "7559af0a4c2daec43938d9bfd91aaf99a00bd5c65bee84f021058f55aaed2c2f",
+  "prior_documents": "Historical evidence; preserved unchanged",
+  "current_survivors": "Direct recovery identities and validity reductions; approved v129 results; v130 finite evidence",
+  "conditional_q2_L4": "Historical conditional scope, not broadly imported",
+  "new_attack": "NONE",
+  "visual_review": "PASS: all 10 pages rendered and visually inspected",
+  "historical_archive_crc_and_all_original_hashes": "PASS",
+  "historical_pdf_and_zip_byte_preservation": "PASS",
+  "current_packet_archive_check": "CRC and every manifest hash verified by package_current130.py; script aborts on failure"
+}
