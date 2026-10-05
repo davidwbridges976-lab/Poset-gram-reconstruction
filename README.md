@@ -4,6 +4,8 @@ Reproducibility repository for a finite-poset reconstruction program studying wh
 
 ## Reading guide
 
+**New standalone packet:** [Information loss through normalization: continuum and finite-poset counterexamples](sharing/counterexamples/README.md). Includes a seven-page PDF and exact reproducibility code; the continuum exploration remains quarantined.
+
 Start with the [three-page sharing overview and reproducible packet (v143)](sharing/v143/README.md). The [10-page v130 mathematics PDF](docs/current/Audit10_Current_Mathematics_v130.pdf) and [research guide](docs/research-guide.md) remain the earlier evidence entry points; the v74-v80 benchmarks remain separate historical experiments.
 
 **Current status:** normalized Gram data $G$ alone do **not** determine every finite poset. An exact 16-element nonisomorphic pair has identical $G$. For this entire Gram fiber, the comparability-degree multiset separates the two realizations. Whether $G$ together with the unordered comparability-degree multiset determines every finite poset remains **unresolved in this project**. No literature-wide open-problem or novelty claim is made.
